@@ -1,0 +1,18 @@
+import {BlogPost} from "../../../components/blog/BlogPost";
+import HeaderImage from "./header.jpg";
+
+export const meta = {
+	title: "Running Plausible with Caddy",
+	date: "2022-02-03",
+	image: {
+		src: HeaderImage,
+		author: {
+			name: "Nguyen Le Viet Anh",
+			url: "https://unsplash.com/photos/POcLQMo2COg",
+		},
+	},
+	tags: ["servers"],
+};
+export default ({children}) => <BlogPost {...meta}>{children}</BlogPost>;
+
+First install Plausible using the official self-hosted installation docs. I installed it using docker-compose, because it heavily simplifies hosting and updates.

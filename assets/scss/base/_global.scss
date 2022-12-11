@@ -1,0 +1,20 @@
+@use "../helper/mixins";
+@use "../helper/variables";
+
+:root {
+	--background: #0e0f11;
+	--text: #fff;
+	--text-muted: #{rgba(#fff, .64)};
+	--gap: clamp(2.4rem, 1.7032rem + 1.9355vw, 4.8rem);
+	--active: #ff00bf;
+}
+
+
+html,
+body {
+	@include mixins.emoji-fonts(variables.$font-name);
+	background-color: var(--background);
+	color: var(--text);
+	line-height: 1.6;
+
+}

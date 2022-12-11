@@ -1,0 +1,24 @@
+import {BlogPost} from "../../../components/blog/BlogPost";
+import HeaderImage from "./header.jpg";
+
+export const meta = {
+	title: "Using caddy for local development (on macOS)",
+	date: "2022-12-01",
+	image: {
+		src: HeaderImage,
+		author: {
+			name: "Ryan De Hamer",
+			url: "https://unsplash.com/photos/aaay3HpogvA",
+		},
+	},
+	tags: ["tools"],
+	featured: true,
+};
+export default ({children}) => <BlogPost {...meta}>{children}</BlogPost>;
+
+
+Caddy is a modern web server with great defaults – so let's use it for local development as well. This guide is for installing it on macOS.
+
+## Install Caddy
+
+First install caddy via Homebrew:
