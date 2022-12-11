@@ -1,21 +1,16 @@
 @use "../helper/variables";
 
-@font-face {
-	font-family: variables.$font-name;
-	font-style: normal;
-	font-weight: 400;
-	font-display: fallback;
-	src: local(""),
-		url("../../font/manrope-v13-latin-400.woff2") format("woff2"),
-		url("../../font/manrope-v13-latin-400.woff") format("woff");
-}
 
-@font-face {
-	font-family: variables.$font-name;
-	font-style: normal;
-	font-weight: 800;
-	font-display: fallback;
-	src: local(""),
-	url("../../font/manrope-v13-latin-800.woff2") format("woff2"),
-	url("../../font/manrope-v13-latin-800.woff") format("woff");
+@each $font-weight in (400, 700) {
+	@each $font-style in (normal, italic) {
+		@font-face {
+			font-family: variables.$font-name;
+			font-style: $font-style;
+			font-weight: $font-weight;
+			font-display: fallback;
+			src: local(""),
+			url("../../font/fira-sans-v16-latin-#{$font-weight}-#{$font-style}.woff2") format("woff2"),
+			url("../../font/fira-sans-v16-latin-#{$font-weight}-#{$font-style}.woff") format("woff");
+		}
+	}
 }
