@@ -1,5 +1,6 @@
 import {PropsWithChildren, ReactElement} from 'react';
 import {StaticImageData} from 'next/image';
+import styles from "./BlogPost.module.scss";
 
 export interface BlogPostMeta
 {
@@ -29,7 +30,7 @@ export function BlogPost (props: PropsWithChildren<BlogPostProps>): ReactElement
 	return (
 		<article>
 			<header>
-				<h1>{props.title}</h1>
+				<h1 className={styles.title}>{props.title}</h1>
 			</header>
 			{props.children}
 		</article>

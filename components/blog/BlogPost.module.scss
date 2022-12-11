@@ -1,0 +1,6 @@
+@use "assets/scss/helper/mixins";
+
+.title {
+	@include mixins.headline;
+	font-size: 4.2rem
+}
